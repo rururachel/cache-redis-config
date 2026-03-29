@@ -1,0 +1,16 @@
+name: Redis Config Cache
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Print message
+        run: echo "Redis config cache updated"
